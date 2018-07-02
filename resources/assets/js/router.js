@@ -7,16 +7,7 @@ export default new VueRouter(
     {
         mode: 'history',
         routes: [
-            {
-                path: '/example'
-//                component: require('SomeComponent')
-            },
-            {
-                path: '*'
-//                component: require('Error404')
-            } // Not found
+            { path: '/products/create', component: require('./components/products/form.vue') }
         ]
     }
 );
-
-

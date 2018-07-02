@@ -30,7 +30,7 @@
       <q-layout-drawer :side="dir_float" v-model="showSidebar">
         <q-list multiline no-border link inset-separator>
           <q-list-header>Main items</q-list-header>
-          <q-collapsible icon="fa fa-users" label="Commercials" sublabel="subtitle">
+          <q-collapsible separator icon="fa fa-users" label="Commercials" sublabel="subtitle">
             <q-item link to="/commercials/orders">
               <q-item-side icon="fa fa-box" />
               <q-item-main label="Orders" />
@@ -46,43 +46,54 @@
           </q-collapsible>
           <q-collapsible icon="fa fa-truck-loading" label="Shipping" sublabel="subtitle">
             <q-item link to="/shipping/pick-ups">
+              <q-item-side icon="fa fa-allergies" />
               <q-item-main label="Pick-ups" />
             </q-item>
             <q-item link to="/shipping/delivery">
+              <q-item-side icon="fa fa-people-carry" />
               <q-item-main label="Delivery" />
             </q-item>
             <q-item link to="/shipping/transportion">
+              <q-item-side icon="fa fa-globe" />
               <q-item-main label="Transportion" />
             </q-item>
           </q-collapsible>
-          <q-collapsible icon="menu" label="Accounting" sublabel="subtitle">
+          <q-collapsible icon="fa fa-user-alt" label="Accounting" sublabel="subtitle">
             <q-item link to="/accounting/collecting">
+              <q-item-side icon="fa fa-coins" />
               <q-item-main label="Collecting" />
             </q-item>
             <q-item link to="/accounting/balance">
+              <q-item-side icon="fa fa-clipboard-list" />
               <q-item-main label="Balance" />
             </q-item>
           </q-collapsible>
-          <q-collapsible icon="menu" label="Manpower" sublabel="subtitle">
+          <q-collapsible icon="fa fa-hand-rock" label="Manpower" sublabel="subtitle">
             <q-item link to="/manpower/hr">
+              <q-item-side icon="fa fa-hospital-symbol" />
               <q-item-main label="HR" />
             </q-item>
             <q-item link to="/manpower/groups">
+              <q-item-side icon="fa fa-hands-helping" />
               <q-item-main label="Groups" />
             </q-item>
             <q-item link to="/manpower/roles-and-access">
+              <q-item-side icon="fa fa-book-open" />
               <q-item-main label="Roles & Access" />
             </q-item>
           </q-collapsible>
           <q-item-separator></q-item-separator>
-          <q-collapsible icon="menu" label="Reporting" sublabel="subtitle">
+          <q-collapsible icon="fa fa-copy" label="Reporting" sublabel="subtitle">
             <q-item link to="/reporting/report1">
+              <q-item-side icon="fa fa-copy" />
               <q-item-main label="Report 1" />
             </q-item>
             <q-item link to="/reporting/report2">
+              <q-item-side icon="fa fa-copy" />
               <q-item-main label="Report 2" />
             </q-item>
             <q-item link to="/reporting/report3">
+              <q-item-side icon="fa fa-copy" />
               <q-item-main label="Report 3" />
             </q-item>
           </q-collapsible>
