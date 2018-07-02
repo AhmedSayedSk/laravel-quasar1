@@ -28,8 +28,6 @@ mix.js('resources/assets/js/app.js', dir.js.app);
 mix.stylus('resources/assets/stylus/main.styl', dir.css.main);
 mix.sass('resources/assets/sass/app.scss', dir.css.app);
 
-mix.copyDirectory('resources/assets/template/img', 'public/img');
-
 mix.webpackConfig({
     output: {
         publicPath: '/',

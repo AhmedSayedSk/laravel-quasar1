@@ -1,55 +1,28 @@
+import Vue from "vue";
 
-import Vue from 'vue';
+import 'quasar-framework/dist/umd/quasar.mat.css';
+import "quasar-extras/material-icons";
+import "quasar-extras/fontawesome";
+import "quasar-extras/mdi";
+import "quasar-extras/ionicons";
+import "quasar-extras/roboto-font";
+import "quasar-extras/animate";
 
-/**
- * Vue JS Plugins (Custom)
- */
-import './plugins/plugins';
+import Quasar, * as All from 'quasar-framework/dist/quasar.mat.esm';
 
-/**
- * Vue JS Directives
- */
-import './directives/directives';
+Vue.use(Quasar, {
+    components: All,
+    directives: All,
+    plugins: All,
+    animations: All
+});
 
-/**
- * Vue JS Filters
- */
-import './filters/filters';
+// import App from './components/App.vue';
+import router from './router.js';
 
-/**
- * Vue Components
- */
-import './components/components';
-
-/**
- * Router an Vuex
- */
-import { router } from './routes/router';
-import { store } from './store/store';
-import { i18n } from './lang/i18n';
-
-/**
- * Master App
- */
-import App from './components/App';
-
-import { mapActions, mapGetters } from 'vuex';
-
-export const bus = new Vue();
+Vue.component('app', require('./components/App.vue'));
 
 const app = new Vue({
     el: '#app',
-    router,
-    store,
-    i18n,
-    render: h => h(App),
-    created() {
-        this.setLanguage(this.langCookie);
-    },
-    methods: {
-        ...mapActions('lang', ['setLanguage'])
-    },
-    computed: {
-        ...mapGetters('lang', ['langCookie'])
-    }
+    router
 });
