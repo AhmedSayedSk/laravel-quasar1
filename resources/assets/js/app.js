@@ -24,5 +24,12 @@ Vue.component('app', require('./components/App.vue'));
 
 const app = new Vue({
     el: '#app',
+    data: {
+    	theme_color: 'black',
+    	layout: {
+    		dir: 'ltr',
+    		side_menu_float: 'left'
+    	}
+    },
     router
 });
