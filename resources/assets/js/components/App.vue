@@ -38,7 +38,7 @@
         <q-scroll-area class="fit">
           <q-list multiline no-border link inset-separator>
             <q-list-header>Main items</q-list-header>
-            <q-collapsible separator icon="fa fa-users" label="Commercials" sublabel="subtitle">
+            <q-collapsible separator icon="fa fa-users" :label="$root.trans('messages.commercials')" sublabel="subtitle">
               <q-item link to="/commercials/orders">
                 <q-item-side icon="fa fa-box" />
                 <q-item-main label="Orders" />

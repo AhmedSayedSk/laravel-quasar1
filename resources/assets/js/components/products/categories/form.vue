@@ -12,6 +12,7 @@
         <q-input float-label="Full description" rows="7" type="textarea" v-model="full_description" />
       </q-field>
       <br>
+      <p>Category image</p>
       <q-uploader
         :url="url"
         :after="[

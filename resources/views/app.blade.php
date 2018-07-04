@@ -13,6 +13,7 @@
         <div id="app">
             <app></app>
         </div>
-        <script type="text/javascript" charset="UTF-8" src="{{ mix(Master::getScriptMap()->js->app) }}"></script>
+        <script src="js/lang.js"></script>
+        <script src="{{ mix(Master::getScriptMap()->js->app) }}"></script>
     </body>
 </html>

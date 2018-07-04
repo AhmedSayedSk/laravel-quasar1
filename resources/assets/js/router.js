@@ -12,6 +12,7 @@ export default new VueRouter(
             { path: '/products/categories/create', component: require('./components/products/categories/form.vue') },
             { path: '/products/specifications/create', component: require('./components/products/specifications/form.vue') },
             { path: '/traders/create', component: require('./components/traders/form.vue') },
+            { path: '/warehouse/create', component: require('./components/warehouse/form.vue') },
         ]
     }
 );

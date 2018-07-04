@@ -17,18 +17,55 @@
       <q-field :count="20">
         <q-input float-label="Store Name" v-model="store_name" />
       </q-field>
+      <br>
       <div class="row justify-between">
         <div class="col-md-5">
-          <q-field :count="20">
-            <q-input float-label="CR SN" v-model="sr_sn" />
-          </q-field>
+          <p>Personal Photo</p>
+          <q-uploader
+            :url="url"
+            :after="[
+              {
+                icon: 'done',
+                handler () {
+                  // do something...
+                }
+              }
+            ]"
+          />
         </div>
         <div class="col-md-5">
-          <q-field :count="20">
-            <q-input float-label="CR copy" v-model="sr_copy" />
-          </q-field>
+          <p>Stores Photo</p>
+          <q-uploader
+            :url="url"
+            :after="[
+              {
+                icon: 'done',
+                handler () {
+                  // do something...
+                }
+              }
+            ]"
+          />
         </div>
       </div>
+      <br>
+      <q-field :count="20">
+        <q-input float-label="CR SN" v-model="sr_sn" />
+      </q-field>
+      <br>
+      <p>CR copy</p>
+      <q-uploader
+        :url="url"
+        :after="[
+          {
+            icon: 'done',
+            handler () {
+              // do something...
+            }
+          }
+        ]"
+      />
+      <br>
       <q-field :count="20">
         <q-input float-label="City" v-model="city" />
       </q-field>
@@ -94,7 +131,18 @@
       <q-field :count="500">
         <q-input float-label="Admin comment" rows="7" type="textarea" v-model="admin_comment" />
       </q-field>
-      <br><br>
+      <q-field :count="50">
+        <q-input float-label="Beginning Balance" v-model="beginning_balance" />
+      </q-field>
+      <br>
+      <q-checkbox v-model="create_login" :color="$root.theme_color" label="Create login" />
+      <br>
+      <br>
+      <q-checkbox v-model="active" :color="$root.theme_color" label="Active" />
+      <br>
+      <br>
+      <q-checkbox v-model="log_to_market_place" :color="$root.theme_color" label="log to Market Place" />
+      <br><br><br>
       <q-btn
         icon="fa fa-plus"
         glossy rounded
@@ -110,6 +158,9 @@
 export default {
   data () {
     return {
+      create_login: true,
+      active: true,
+      log_to_market_place: true,
       specification_name: '',
       display_order: '',
       option_name: '',
